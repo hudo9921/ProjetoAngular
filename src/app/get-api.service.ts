@@ -1,7 +1,7 @@
-import { loginUrl } from './../environments/environment';
+import { apiUrl } from './../environments/environment';
 import { Injectable } from '@angular/core';
 
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 
@@ -16,6 +16,11 @@ export class GetApiService {
 
   login(data: any):Observable<any>
   {
-    return this.http.post(`${loginUrl}visits/login`,data);
+    return this.http.post(`${apiUrl}visits/login`,data);
+  }
+  loadUsers(token: any):Observable<any>
+  {
+    const headers = new HttpHeaders({'Authorization':token});
+    return this.http.get(`${apiUrl}visits/get_clients`,{headers: headers})
   }
 }
