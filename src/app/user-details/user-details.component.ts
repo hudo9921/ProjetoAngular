@@ -62,6 +62,10 @@ export class UserDetailsComponent implements OnInit {
   {
     let id = this.activeRoute.snapshot.paramMap.get("id");
     let token = localStorage.getItem("tokenAutorizao");
+    if(!token)
+    {
+     this.router.navigateByUrl('');
+    }
     this.loadUserDetails(token,id);
   }
   loadUserDetails(token:any,id:any):void
