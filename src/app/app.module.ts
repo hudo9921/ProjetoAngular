@@ -15,12 +15,15 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { ListaUsersComponent } from './lista-users/lista-users.component';
 import {MatListModule} from '@angular/material/list';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ListaUsersComponent
+    ListaUsersComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,9 @@ import {MatListModule} from '@angular/material/list';
     MatButtonModule,
     MatCardModule,
     MatListModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    }),
     BrowserAnimationsModule
   ],
   providers: [],

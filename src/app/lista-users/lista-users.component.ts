@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./lista-users.component.css']
 })
 export class ListaUsersComponent implements OnInit {
-  listUser=[{name:""}];
+  listUser=[{name:"",id:""}];
   constructor(private GetApiService: GetApiService, private router:Router) { }
 
   ngOnInit(): void 
@@ -20,8 +20,15 @@ export class ListaUsersComponent implements OnInit {
 
     this.GetApiService.loadUsers(token).subscribe(result=>
       {
+        console.log(result);
         this.listUser=result.clients;
       })
+  }
+
+  getUserDetails(id:any):void
+  {
+    console.log(id);
+    this.router.navigateByUrl('/userDetails/'+id);
   }
 
 }

@@ -23,4 +23,9 @@ export class GetApiService {
     const headers = new HttpHeaders({'Authorization':token});
     return this.http.get(`${apiUrl}visits/get_clients`,{headers: headers})
   }
+  loadUserDetails(token:any,id:any):Observable<any>
+  {
+    const headers = new HttpHeaders({'Authorization':token});
+    return this.http.get(`${apiUrl}visits/get_client_data/`+id,{headers:headers})
+  }
 }

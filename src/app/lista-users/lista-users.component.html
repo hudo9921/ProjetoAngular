@@ -1,5 +1,5 @@
 <mat-selection-list #users [multiple]="false">
-    <mat-list-option *ngFor="let user of listUser" [value]="user">
+    <mat-list-option *ngFor="let user of listUser" [value]="user" (click)="getUserDetails(user.id)">
       {{user.name}}
     </mat-list-option>
   </mat-selection-list>
