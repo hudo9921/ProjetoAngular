@@ -14,6 +14,10 @@ export class ListaUsersComponent implements OnInit {
   ngOnInit(): void 
   {
     let token = localStorage.getItem("tokenAutorizao");
+    if(!token)
+    {
+     this.router.navigateByUrl('');
+    }
     this.loadUsers(token);
   }
   loadUsers(token: any):void{

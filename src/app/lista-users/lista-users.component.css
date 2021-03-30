@@ -1,0 +1,15 @@
+.logo-dashboard{
+    height: auto; width: 90px;padding-top: 45px;
+}
+.container-body{
+    margin: 45px;
+}
+.header{
+    font-weight:550;
+}
+.drawer-content{
+   background-color: #f1f1f1;
+}
+.main-container{
+    height: 100%;
+}

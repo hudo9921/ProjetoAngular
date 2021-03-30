@@ -17,6 +17,8 @@ import { ListaUsersComponent } from './lista-users/lista-users.component';
 import {MatListModule} from '@angular/material/list';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { NgxEchartsModule } from 'ngx-echarts';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { NgxEchartsModule } from 'ngx-echarts';
     MatButtonModule,
     MatCardModule,
     MatListModule,
+    MatDividerModule,
+    MatSidenavModule,
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts')
     }),

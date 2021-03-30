@@ -74,11 +74,16 @@ export class UserDetailsComponent implements OnInit {
       {
         this.userData=result.data;
         this.instanceGraph();
-        this.isLoading=false;
       })
+  }
+  voltarTela():void
+  {
+    console.log("voltando")
+    this.router.navigateByUrl('/listaUsers');
   }
   instanceGraph():void
   {
+
     this.options= {
       tooltip: {
         trigger: 'axis',
@@ -117,7 +122,6 @@ export class UserDetailsComponent implements OnInit {
           stack: 'counts',
           areaStyle: { normal: {} },
           data:this.userData
-  
         },
       ]
     };

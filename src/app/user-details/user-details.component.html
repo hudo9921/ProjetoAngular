@@ -1,3 +1,27 @@
-<div class="button-groups">
-  </div>
-  <div echarts [options]="options" [loading]="isLoading" theme="macarons" class="demo-chart"></div>
+
+
+
+  <mat-drawer-container class="main-container" >
+    <mat-drawer mode="side" opened >
+        <img class="logo-dashboard" src="assets/Images/Logo.png" >
+    </mat-drawer>
+    
+    <mat-drawer-content class="drawer-content"  >
+        <mat-card class="container-body"> <h1 class="header">
+            Dado do Cliente
+        </h1>
+        <div class="button-groups">
+        </div>
+        <div echarts [options]="options" [loading]="isLoading" theme="macarons" class="demo-chart">
+        </div>
+        <div fxLayoutAlign="end center" >
+          <button mat-raised-button type="voltar" color="warn" (click)="voltarTela()" > voltar </button> 
+        </div>
+        </mat-card>
+    </mat-drawer-content>
+
+  </mat-drawer-container>
+  
+
+  
+  

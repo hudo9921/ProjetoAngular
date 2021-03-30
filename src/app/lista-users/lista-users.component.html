@@ -1,7 +1,22 @@
-<mat-selection-list #users [multiple]="false">
-    <mat-list-option *ngFor="let user of listUser" [value]="user" (click)="getUserDetails(user.id)">
-      {{user.name}}
-    </mat-list-option>
-  </mat-selection-list>
+<mat-drawer-container class="main-container" >
+    <mat-drawer mode="side" opened >
+        <img class="logo-dashboard" src="assets/Images/Logo.png" >
+    </mat-drawer>
+    
+    <mat-drawer-content class="drawer-content"  >
+        <mat-card class="container-body"> <h1 class="header">
+            Lista de Clientes
+        </h1>
+        <mat-selection-list #users [multiple]="false">
+            <mat-list-option *ngFor="let user of listUser" [value]="user" (click)="getUserDetails(user.id)">
+              {{user.name}} <mat-divider></mat-divider>
+            </mat-list-option>
+          </mat-selection-list>
+        </mat-card>
+    </mat-drawer-content>
+
+  </mat-drawer-container>
+  
+
   
   
