@@ -1,0 +1,2 @@
+Escolhi Angular, pois é, entre os dois apresentados no slide, a framework que eu mais tinha afinidade.
+Além disso, tenho para mim que entre as duas opções, Angular se mostrava a mais apta por sua "simplicidade", bom para o prazo.
